@@ -1,0 +1,22 @@
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Supprimer une tâche</title>
+</head>
+<body>
+    <h1>Confirmer la suppression</h1>
+    <p>Êtes-vous sûr de vouloir supprimer la commande  de</p> <h2> "{{ commande.client }}" ? </h2>
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit">Oui, supprimer</button>
+    </form>
+    <a href="{% url 'acceuil' %}">Annuler</a>
+</body>
+</html>
+
+
+
